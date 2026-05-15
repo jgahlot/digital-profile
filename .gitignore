@@ -1,0 +1,21 @@
+# Personal
+*.pdf
+backup-dark/*.pdf
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+
+# Python (used to generate QR)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Logs
+*.log
