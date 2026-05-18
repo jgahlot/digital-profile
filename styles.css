@@ -414,6 +414,14 @@ a:hover, a:focus-visible { color: var(--plum); }
   margin-top: .35rem;
   max-width: 70ch;
 }
+#panel-summary .panel__lead,
+#panel-summary .panel__lead strong,
+#panel-summary .panel__lead em,
+#panel-summary .panel__lead span {
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
+  font-family: var(--font);
+  line-height: 1.7;
+}
 
 .hl {
   color: var(--ink);
