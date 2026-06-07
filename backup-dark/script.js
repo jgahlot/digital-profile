@@ -48,6 +48,38 @@
     });
   });
 
+  /* ---------- Lightbox (feedback images) ---------- */
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  if (lightbox && lightboxImg) {
+    const closeBtn = lightbox.querySelector('.lightbox__close');
+
+    const openLightbox = (src, alt) => {
+      lightboxImg.src = src;
+      lightboxImg.alt = alt || '';
+      lightbox.removeAttribute('hidden');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeLightbox = () => {
+      lightbox.setAttribute('hidden', '');
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    };
+
+    document.querySelectorAll('.feedback-img').forEach((img) => {
+      img.addEventListener('click', () => openLightbox(img.src, img.alt));
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target !== lightboxImg) closeLightbox();
+    });
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lightbox.hasAttribute('hidden')) closeLightbox();
+    });
+  }
+
   /* ---------- Year ---------- */
   const yr = document.getElementById('year');
   if (yr) yr.textContent = String(new Date().getFullYear());
@@ -74,7 +106,7 @@
       io.observe(el);
     };
 
-    document.querySelectorAll('.tl-card, .skill-group, .stat, .project, .achv, .edu-card, .cert, .extras li')
+    document.querySelectorAll('.tl-card, .skill-group, .stat, .project, .achv, .feedback-card, .edu-card, .cert, .extras li')
       .forEach((el, i) => animate(el, Math.min(i * 35, 350)));
   }
 })();

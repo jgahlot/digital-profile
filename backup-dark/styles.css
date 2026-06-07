@@ -666,6 +666,99 @@ a:hover, a:focus-visible { color: var(--amber); }
   font-style: italic;
 }
 
+/* Feedbacks */
+.feedbacks__intro {
+  margin: .5rem 0 0;
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+.feedbacks__subtitle {
+  margin: 2.5rem 0 0;
+  font-family: var(--display);
+  font-size: 1.3rem;
+  color: var(--ink);
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+}
+.feedbacks-scroll {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.feedback-card {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.feedback-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); }
+.feedback-card img {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  display: block;
+  cursor: zoom-in;
+}
+.feedback-card figcaption {
+  margin-top: .7rem;
+  text-align: center;
+  font-family: var(--hand);
+  font-size: 1.1rem;
+  color: var(--ink-mute);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(4px);
+  cursor: zoom-out;
+  opacity: 0;
+  animation: lightbox-fade .25s var(--ease) forwards;
+}
+.lightbox[hidden] { display: none; }
+@keyframes lightbox-fade { to { opacity: 1; } }
+.lightbox__img {
+  max-width: 92vw;
+  max-height: 88vh;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--line);
+  box-shadow: var(--shadow-2);
+  cursor: default;
+  transform: scale(.85);
+  animation: lightbox-zoom .25s var(--ease) forwards;
+}
+@keyframes lightbox-zoom { to { transform: scale(1); } }
+.lightbox__close {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.4rem;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #1a1a1a;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-1);
+  transition: transform .2s var(--ease), background .2s var(--ease);
+}
+.lightbox__close:hover { transform: scale(1.08); background: #fff; }
+
 /* Education */
 .edu-grid {
   margin-top: 1.75rem;

@@ -64,6 +64,7 @@
       <button class="tab" role="tab" aria-selected="false" aria-controls="panel-experience" id="tab-experience" tabindex="-1">🏯 Experience</button>
       <button class="tab" role="tab" aria-selected="false" aria-controls="panel-projects" id="tab-projects" tabindex="-1">🚀 Projects</button>
       <button class="tab" role="tab" aria-selected="false" aria-controls="panel-achievements" id="tab-achievements" tabindex="-1">🏆 Achievements</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="panel-feedbacks" id="tab-feedbacks" tabindex="-1">💬 Feedbacks</button>
       <button class="tab" role="tab" aria-selected="false" aria-controls="panel-education" id="tab-education" tabindex="-1">🎓 Education</button>
       <button class="tab" role="tab" aria-selected="false" aria-controls="panel-certificates" id="tab-certificates" tabindex="-1">📜 Certificates</button>
       <button class="tab" role="tab" aria-selected="false" aria-controls="panel-extras" id="tab-extras" tabindex="-1">🍡 Extra-Curricular</button>
@@ -479,6 +480,74 @@
         </ul>
       </article>
 
+      <!-- Feedbacks -->
+      <article class="panel" role="tabpanel" id="panel-feedbacks" aria-labelledby="tab-feedbacks" hidden>
+        <h2 class="panel__title">Feedbacks</h2>
+        <p class="feedbacks__intro">Kind words and recognition shared by colleagues and customers I&rsquo;ve had the pleasure to work with. Click any image to zoom in.</p>
+        <div class="feedbacks-scroll">
+          <figure class="feedback-card">
+            <img class="feedback-img" src="Feedbacks/Hayley_Feedback.png" alt="Feedback from Hayley" loading="lazy" />
+            <figcaption>Hayley</figcaption>
+          </figure>
+          <figure class="feedback-card">
+            <img class="feedback-img" src="Feedbacks/Katrina_Feedback.png" alt="Feedback from Katrina" loading="lazy" />
+            <figcaption>Katrina</figcaption>
+          </figure>
+          <figure class="feedback-card">
+            <img class="feedback-img" src="Feedbacks/Novi_Feedback.png" alt="Feedback from Novi" loading="lazy" />
+            <figcaption>Novi</figcaption>
+          </figure>
+          <figure class="feedback-card">
+            <img class="feedback-img" src="Feedbacks/Sam_Feedback.png" alt="Feedback from Sam" loading="lazy" />
+            <figcaption>Sam</figcaption>
+          </figure>
+          <figure class="feedback-card">
+            <img class="feedback-img" src="Feedbacks/Zameer_Feedback.png" alt="Feedback from Zameer" loading="lazy" />
+            <figcaption>Zameer</figcaption>
+          </figure>
+        </div>
+
+        <h3 class="feedbacks__subtitle">Feedbacks in VMware from the customers</h3>
+        <div class="feedbacks-scroll">
+          <figure class="feedback-card">
+            <img class="feedback-img" src="Feedbacks/VMware_Customer_Feedback_1.png" alt="VMware customer feedback 1" loading="lazy" />
+          </figure>
+          <figure class="feedback-card">
+            <img class="feedback-img" src="Feedbacks/VMware_Customer_Feedback_2.png" alt="VMware customer feedback 2" loading="lazy" />
+          </figure>
+          <figure class="feedback-card">
+            <img class="feedback-img" src="Feedbacks/VMware_Customer_Feedback_3.png" alt="VMware customer feedback 3" loading="lazy" />
+          </figure>
+          <figure class="feedback-card">
+            <img class="feedback-img" src="Feedbacks/VMware_Customer_Feedback_4.png" alt="VMware customer feedback 4" loading="lazy" />
+          </figure>
+          <figure class="feedback-card">
+            <img class="feedback-img" src="Feedbacks/VMware_Customer_Feedback_5.png" alt="VMware customer feedback 5" loading="lazy" />
+          </figure>
+          <figure class="feedback-card">
+            <img class="feedback-img" src="Feedbacks/VMware_Customer_Feedback_6.png" alt="VMware customer feedback 6" loading="lazy" />
+          </figure>
+          <figure class="feedback-card">
+            <img class="feedback-img" src="Feedbacks/VMware_Customer_Feedback_7.png" alt="VMware customer feedback 7" loading="lazy" />
+          </figure>
+          <figure class="feedback-card">
+            <img class="feedback-img" src="Feedbacks/VMware_Customer_Feedback_8.png" alt="VMware customer feedback 8" loading="lazy" />
+          </figure>
+          <figure class="feedback-card">
+            <img class="feedback-img" src="Feedbacks/VMware_Customer_Feedback_9.png" alt="VMware customer feedback 9" loading="lazy" />
+          </figure>
+          <figure class="feedback-card">
+            <img class="feedback-img" src="Feedbacks/VMware_Customer_Feedback_10.png" alt="VMware customer feedback 10" loading="lazy" />
+          </figure>
+          <figure class="feedback-card">
+            <img class="feedback-img" src="Feedbacks/VMware_Customer_Feedback_11.png" alt="VMware customer feedback 11" loading="lazy" />
+          </figure>
+          <figure class="feedback-card">
+            <img class="feedback-img" src="Feedbacks/VMware_Customer_Feedback_12.png" alt="VMware customer feedback 12" loading="lazy" />
+          </figure>
+        </div>
+      </article>
+
       <!-- Education -->
       <article class="panel" role="tabpanel" id="panel-education" aria-labelledby="tab-education" hidden>
         <h2 class="panel__title">Education</h2>
@@ -552,6 +621,12 @@
       <a href="https://www.linkedin.com/in/jishangahlot?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BPGN59962QMO5xhjt9SitWg%3D%3D" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </p>
   </footer>
+
+  <!-- Lightbox for zooming feedback images -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Zoomed image" hidden>
+    <button class="lightbox__close" type="button" aria-label="Close zoomed image">&times;</button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="" />
+  </div>
 
   <script src="script.js" defer></script>
 </body>
