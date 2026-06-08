@@ -310,6 +310,37 @@
 
           <article class="proj-card">
             <header class="proj-card__head">
+              <h3>E-Series Storage AIQ Analyzer</h3>
+              <ul class="proj-tags"><li>Python 3.14</li><li>Streamlit</li><li>NetApp E-Series</li><li>Active IQ</li><li>NetAIConnect (LLM)</li><li>PDF report</li></ul>
+            </header>
+            <p class="proj-lead"><strong>What I built &mdash;</strong> A Python &amp; Streamlit web app that auto-analyzes NetApp E-Series <em>STORAGE-ARRAY-PROFILE</em> files exported from Active IQ AutoSupport &mdash; replacing slow, manual review with an instant, rule-based summary plus a branded, downloadable PDF report.</p>
+            <div class="proj-meta">
+              <div><span class="proj-meta__label">Who it helps</span><p>Renewal Specialists and Quoting Specialists on the QS AMER and USPS teams &mdash; controls revenue leakage by reliably catching expansion shelves that must be included in renewal quotes.</p></div>
+              <div><span class="proj-meta__label">When to use</span><p>While validating an Active IQ profile during renewal quoting &mdash; to confirm drive counts, classify base vs. expansion shelves, and produce an auditable PDF for the quote record in seconds instead of minutes.</p></div>
+            </div>
+            <div class="proj-how">
+              <span class="proj-meta__label">How it works</span>
+              <ol>
+                <li>Upload a profile file (<code>.txt</code>, <code>.pdf</code>, <code>.docx</code>, <code>.pptx</code>, <code>.doc</code>, <code>.ppt</code>).</li>
+                <li>Extract text locally (<code>pypdf</code> for PDFs, <code>zipfile</code> + XML for Office files, direct decode for text).</li>
+                <li>Validate that the file is a genuine STORAGE-ARRAY-PROFILE.</li>
+                <li>Deterministically parse Hardware Summary, every DRIVES row, and the IOM section.</li>
+                <li>Classify shelves &mdash; Shelf 99 = Base enclosure; any other Shelf ID = Expansion.</li>
+                <li>Cross-check Hardware-Summary vs. parsed drive counts and IOM data (PASS / FAIL / WARNING).</li>
+                <li>Send the parsed summary + raw text to the LLM for a &ldquo;Deeper Analysis&rdquo; narrative (capacity, redundancy, IOM/firmware consistency, risks, next checks).</li>
+                <li>Generate a timestamped branded PDF and enable a follow-up chat grounded strictly in the uploaded file.</li>
+              </ol>
+            </div>
+            <div class="proj-foot">
+              <div><span class="proj-meta__label">Inputs</span><p>Active IQ STORAGE-ARRAY-PROFILE export in any supported format; optional follow-up questions in the chat panel.</p></div>
+              <div><span class="proj-meta__label">Outputs</span><p>Structured on-screen analysis, color-coded validation table (PASS / FAIL / WARNING), one-click branded PDF report, and an interactive Q&amp;A panel anchored to the file.</p></div>
+              <div><span class="proj-meta__label">Tools / Integrations</span><p>Python 3.14 &middot; Streamlit &middot; <code>reportlab</code> &middot; <code>pypdf</code> &middot; <code>openai</code> SDK via NetApp <strong>NetAIConnect</strong> &middot; <code>python-dotenv</code> &middot; <code>truststore</code>.</p></div>
+            </div>
+            <p class="proj-status"><strong>Status / Notes:</strong> Supports the renewal quoting workflow for QS AMER &amp; USPS. Deterministic Python parsing is the source of truth &mdash; the LLM only enriches results; the app degrades gracefully to parsing-only when no API key is configured. Uploaded data stays inside NetApp&rsquo;s corporate environment via the internal NetAIConnect endpoint.</p>
+          </article>
+
+          <article class="proj-card">
+            <header class="proj-card__head">
               <h3>Quoting Policy Chatbot</h3>
               <ul class="proj-tags"><li>Copilot Studio</li><li>Microsoft Teams</li><li>RPP data</li></ul>
             </header>
