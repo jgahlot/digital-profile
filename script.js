@@ -46,22 +46,36 @@
   const lightboxImg = document.getElementById('lightbox-img');
   if (lightbox && lightboxImg) {
     const closeBtn = lightbox.querySelector('.lightbox__close');
+    let lastFocused = null;
 
     const openLightbox = (src, alt) => {
+      lastFocused = document.activeElement;
       lightboxImg.src = src;
       lightboxImg.alt = alt || '';
       lightbox.removeAttribute('hidden');
       document.body.style.overflow = 'hidden';
+      if (closeBtn) closeBtn.focus();
     };
 
     const closeLightbox = () => {
       lightbox.setAttribute('hidden', '');
-      lightboxImg.src = '';
+      lightboxImg.removeAttribute('src');
+      lightboxImg.alt = '';
       document.body.style.overflow = '';
+      if (lastFocused && typeof lastFocused.focus === 'function') {
+        lastFocused.focus();
+      }
+      lastFocused = null;
     };
 
     document.querySelectorAll('.feedback-img').forEach((img) => {
       img.addEventListener('click', () => openLightbox(img.src, img.alt));
+      img.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLightbox(img.src, img.alt);
+        }
+      });
     });
 
     lightbox.addEventListener('click', (e) => {
@@ -69,7 +83,14 @@
     });
     if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !lightbox.hasAttribute('hidden')) closeLightbox();
+      if (lightbox.hasAttribute('hidden')) return;
+      if (e.key === 'Escape') {
+        closeLightbox();
+      } else if (e.key === 'Tab' && closeBtn) {
+        // Only one focusable element in the dialog — trap focus on it.
+        e.preventDefault();
+        closeBtn.focus();
+      }
     });
   }
 
