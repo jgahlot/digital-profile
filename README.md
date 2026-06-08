@@ -2,7 +2,7 @@
 
 An interactive, responsive digital resume for **Jishan Gahlot**, AI Technical Product Manager at NetApp.
 
-🔗 **Live site:** https://jgahlot.github.io/digital-resume/
+🔗 **Live site:** https://jgahlot.github.io/digital-profile/
 
 ## Themes
 - **Ghibli-inspired light theme** (default) — `index.html`
