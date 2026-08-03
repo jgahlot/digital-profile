@@ -28,7 +28,7 @@
       </div>
       <div class="hero__intro">
         <p class="hero__eyebrow">Hello, I&rsquo;m</p>
-        <h1 class="hero__name">Jishan Gahlot <span class="hero__pronoun">(he/him)</span></h1>
+        <h1 class="hero__name">Jishan Gahlot <span class="hero__cert">CSPO&reg;</span> <span class="hero__pronoun">(he/him)</span></h1>
         <p class="hero__title">AI Technical Product Manager · NetApp</p>
         <p class="hero__location">📍 Bengaluru, Karnataka, India</p>
         <ul class="hero__contact" aria-label="Contact information">
@@ -43,6 +43,10 @@
           </a>
           <a class="btn btn--ghost" href="mailto:jishan.gahlot@gmail.com">Get in touch</a>
         </div>
+      </div>
+      <div class="hero__badge">
+        <img src="../CSPO_Badge.png" alt="Certified Scrum Product Owner (CSPO) badge from Scrum Alliance"
+          width="300" height="300" loading="lazy" decoding="async" />
       </div>
     </div>
   </header>
@@ -76,6 +80,17 @@
         <p class="panel__lead">
           Good foundation in ML algorithms using <span class="hl">Pandas</span>, <span class="hl">NumPy</span>, <span class="hl">Matplotlib</span>, and other ML libraries — with hands-on experience supporting teams by creating algorithms for resume parsing and business-focused technology delivery during my internship at <strong>TalentBox</strong>.
         </p>
+
+        <div class="featured-award featured-award--cspo">
+          <div class="featured-award__media">
+            <img src="../CSPO_pic.png" alt="Certified Scrum Product Owner certificate awarded to Jishan Gahlot by Scrum Alliance" loading="lazy" />
+          </div>
+          <div class="featured-award__body">
+            <span class="featured-award__ribbon">📜 New Certification</span>
+            <h3>Certified Scrum Product Owner&reg; (CSPO&reg;)</h3>
+            <p>Earned the Certified Scrum Product Owner&reg; (CSPO&reg;) credential from Scrum Alliance&reg; on July 12, 2026 (Certificant ID: 001838186), demonstrating product ownership expertise in Agile delivery, backlog leadership, and stakeholder value outcomes. Active through July 12, 2028.</p>
+          </div>
+        </div>
 
         <div class="featured-award">
           <div class="featured-award__media">
@@ -276,168 +291,330 @@
       <!-- Projects -->
       <article class="panel" role="tabpanel" id="panel-projects" aria-labelledby="tab-projects" hidden>
         <h2 class="panel__title">Projects</h2>
-        <p class="panel__lead">A detailed look at the AI products and workflows I&rsquo;ve designed, built, and shipped — what each does, who it helps, and how it works under the hood.</p>
+        <p class="panel__lead">A detailed look at the AI products, platforms, and workflows I&rsquo;ve designed, built,
+          and shipped for Renewals, Quoting, Customer Success, and leadership teams — including measurable impact and
+          the core stack behind each solution.</p>
 
         <div class="proj-grid">
 
           <article class="proj-card">
             <header class="proj-card__head">
+              <h3>AI Product Leadership Overview</h3>
+              <ul class="proj-tags">
+                <li>Copilot Studio</li>
+                <li>Power Platform</li>
+                <li>Python</li>
+                <li>Abacus AI</li>
+              </ul>
+            </header>
+            <p class="proj-lead"><strong>What I built —</strong> Lead the design and delivery of AI-powered internal
+              products for Renewals, Quoting, Customer Success, and leadership teams using Microsoft Copilot Studio,
+              Power Apps, Power Automate, Python with Pair Programming, GitHub CLI, Cursor, and Abacus AI.</p>
+            <div class="proj-meta">
+              <div><span class="proj-meta__label">Who it helps</span>
+                <p>Renewals, Quoting, Customer Success, and leadership stakeholders across AMER, EMEA, and APAC.</p>
+              </div>
+              <div><span class="proj-meta__label">Focus</span>
+                <p>Convert manual work into production-ready, self-service AI workflows with measurable process
+                  reduction and adoption enablement.</p>
+              </div>
+            </div>
+            <p class="proj-status"><strong>Core approach:</strong> End-to-end ownership across product strategy, UAT,
+              delivery, and continuous enhancement.</p>
+          </article>
+
+          <article class="proj-card">
+            <header class="proj-card__head">
               <h3>Quoting Policy Chatbot</h3>
-              <ul class="proj-tags"><li>Copilot Studio</li><li>Microsoft Teams</li><li>RPP data</li></ul>
+              <ul class="proj-tags">
+                <li>Copilot Studio</li>
+                <li>Microsoft Teams</li>
+                <li>RPP data</li>
+              </ul>
             </header>
-            <p class="proj-lead"><strong>What I built —</strong> A Copilot Studio AI agent that provides instant, policy-based answers to support Renewal and Quoting teams during live customer conversations.</p>
+            <p class="proj-lead"><strong>What I built —</strong> Built and deployed a Quoting Policy Chatbot in
+              Microsoft Teams using Microsoft Copilot Studio to provide instant, policy-based answers, renewal guidance,
+              product configuration support, RPP data lookup, and quote comparison assistance during live customer
+              conversations.</p>
             <div class="proj-meta">
-              <div><span class="proj-meta__label">Who it helps</span><p>Renewal Specialists, Quoting Specialists, and stakeholders who need fast access to policy and configuration details.</p></div>
-              <div><span class="proj-meta__label">When to use</span><p>When a specialist needs quick policy clarification, RPP data lookup, or fast validation support without manual file searching.</p></div>
-            </div>
-            <div class="proj-how">
-              <span class="proj-meta__label">How it works</span>
-              <ol>
-                <li>Ask a question in the chatbot (Teams / Copilot).</li>
-                <li>Retrieve policy answers and RPP details (including item-number configurations).</li>
-                <li>Upload old vs. new quotes to compare differences (quote validation support).</li>
-              </ol>
+              <div><span class="proj-meta__label">Who it helps</span>
+                <p>Renewal and Quoting specialists who need fast policy and configuration support during live calls.</p>
+              </div>
+              <div><span class="proj-meta__label">Key capabilities</span>
+                <p>Policy answers, renewal guidance, product configuration support, RPP lookup, and quote comparison.</p>
+              </div>
             </div>
             <div class="proj-foot">
-              <div><span class="proj-meta__label">Inputs</span><p>User questions, RPP data sources / files, and optional quote files (old and new).</p></div>
-              <div><span class="proj-meta__label">Outputs</span><p>Instant answers, configuration details, and quote comparison results.</p></div>
-              <div><span class="proj-meta__label">Tools / Integrations</span><p>Copilot Studio; Microsoft Teams / Copilot. Extensible to Salesforce, Microsoft tools, Oracle, and other systems.</p></div>
+              <div><span class="proj-meta__label">Tools / Integrations</span>
+                <p>Microsoft Copilot Studio · Microsoft Teams</p>
+              </div>
+              <div><span class="proj-meta__label">Impact</span>
+                <p>Faster live-conversation support with less manual searching across policy and quote files.</p>
+              </div>
+              <div><span class="proj-meta__label">Status</span>
+                <p>Deployed and used during live customer conversations.</p>
+              </div>
             </div>
-            <p class="proj-status"><strong>Status / Notes:</strong> Designed for fast access during calls and to reduce manual searching in large files.</p>
           </article>
 
           <article class="proj-card">
             <header class="proj-card__head">
-              <h3>IB Review AI Agent</h3>
-              <ul class="proj-tags"><li>Abacus AI</li><li>Copilot Studio</li><li>SPARK</li><li>Weekly refresh</li></ul>
+              <h3>Quote Validation Modernization</h3>
+              <ul class="proj-tags">
+                <li>Renewals Toolkit</li>
+                <li>Self-service</li>
+                <li>98% reduction</li>
+              </ul>
             </header>
-            <p class="proj-lead"><strong>What I built —</strong> An AI agent that monitors at-risk customers using the IB Review data file in SPARK and surfaces actionable insights for leaders.</p>
+            <p class="proj-lead"><strong>What I built —</strong> Owned the modernization of Quote Validation within the
+              Renewals Toolkit, converting a manual three-file comparison process into a self-service workflow that runs
+              15 validation checks and consolidates Multi Quote, Scope, and Score data into one output.</p>
             <div class="proj-meta">
-              <div><span class="proj-meta__label">Who it helps</span><p>Geo leaders, managers, and stakeholders who need visibility into customer risk signals captured by CSMs.</p></div>
-              <div><span class="proj-meta__label">When to use</span><p>When reviewing customer health / risk trends and prioritizing outreach across regions and districts.</p></div>
+              <div><span class="proj-meta__label">Before</span>
+                <p>Manual three-file comparison taking approximately 60 minutes per validation.</p>
+              </div>
+              <div><span class="proj-meta__label">After</span>
+                <p>Self-service workflow completing validation in approximately 1 minute — a
+                  <strong>98%</strong> reduction.</p>
+              </div>
             </div>
-            <div class="proj-how">
-              <span class="proj-meta__label">How it works</span>
-              <ol>
-                <li>Consumes the IB Review file from SPARK (CSM call notes / inputs).</li>
-                <li>Classifies accounts — Concerning / Cautious as at-risk; Neutral / Positive otherwise.</li>
-                <li>Publishes refreshed insights after the weekly data update.</li>
-              </ol>
-            </div>
-            <div class="proj-foot">
-              <div><span class="proj-meta__label">Inputs</span><p>IB Review data file in SPARK; CSM-provided customer notes / signals.</p></div>
-              <div><span class="proj-meta__label">Outputs</span><p>Customer risk classification and an at-a-glance view for monitoring by Geo / district.</p></div>
-              <div><span class="proj-meta__label">Tools / Platforms</span><p>Implemented in both Abacus AI and Copilot Studio to compare platform fit and user experience.</p></div>
-            </div>
-            <p class="proj-status"><strong>Refresh cadence:</strong> Source file is refreshed every Monday; I redeploy the agent weekly for updated insights.</p>
+            <p class="proj-status"><strong>Outcome:</strong> Consolidated Multi Quote, Scope, and Score data into a
+              single output with 15 validation checks.</p>
           </article>
 
           <article class="proj-card">
             <header class="proj-card__head">
-              <h3>IB Review AI Workflow</h3>
-              <ul class="proj-tags"><li>Abacus AI</li><li>Copilot CLI</li><li>Excel</li><li>Automated email</li></ul>
+              <h3>Quote Comparison Studio</h3>
+              <ul class="proj-tags">
+                <li>Product strategy</li>
+                <li>UAT</li>
+                <li>95%+ reduction</li>
+              </ul>
             </header>
-            <p class="proj-lead"><strong>What I built —</strong> An automated workflow version of the IB Review AI Agent that proactively emails at-risk customer details to Renewals Geo leaders.</p>
+            <p class="proj-lead"><strong>What I built —</strong> Led product strategy and UAT for Quote Comparison
+              Studio, transforming fragmented CPQ, PDF, and spreadsheet reviews into an AI-assisted workflow that
+              compares historic and current quotes in <strong>2&ndash;3 minutes</strong> versus approximately 60 minutes
+              manually.</p>
             <div class="proj-meta">
-              <div><span class="proj-meta__label">Who it helps</span><p>Renewals Geo leaders and managers who need scheduled visibility into at-risk accounts.</p></div>
-              <div><span class="proj-meta__label">When to use</span><p>When you want proactive, recurring distribution of at-risk accounts (instead of users opening a tool and checking manually).</p></div>
+              <div><span class="proj-meta__label">Who it helps</span>
+                <p>Renewals overall team, Commercial, and Strategics users reviewing historic vs. current quotes.</p>
+              </div>
+              <div><span class="proj-meta__label">Research-backed impact</span>
+                <p>Reported <strong>95%+</strong> reduction based on research with Renewals, Commercial, and Strategics
+                  users.</p>
+              </div>
             </div>
-            <div class="proj-how">
-              <span class="proj-meta__label">How it works</span>
-              <ol>
-                <li>Identifies at-risk accounts (Concerning and Cautious).</li>
-                <li>Filters by Renewals Geo (APAC, EMEA, AMER).</li>
-                <li>Generates three separate &ldquo;At-Risk&rdquo; Excel files — one per Geo.</li>
-                <li>Drafts a tailored email per Geo and sends it with the file attached.</li>
-              </ol>
-            </div>
-            <div class="proj-foot">
-              <div><span class="proj-meta__label">Inputs</span><p>IB Review dataset; classification logic; Geo mapping for APAC / EMEA / AMER.</p></div>
-              <div><span class="proj-meta__label">Outputs</span><p>3 Geo-specific Excel files + 3 emails sent to the appropriate Geo leaders.</p></div>
-              <div><span class="proj-meta__label">Platforms</span><p>Abacus AI (scheduled trigger, daily emails) and Copilot CLI (local command to trigger and send emails).</p></div>
-            </div>
-            <p class="proj-status"><strong>Status / Notes:</strong> Copilot CLI is a good short-term option (runs locally); Abacus AI supports fully scheduled delivery.</p>
+            <p class="proj-status"><strong>Result:</strong> Replaced fragmented CPQ/PDF/spreadsheet review with a faster
+              AI-assisted comparison experience.</p>
           </article>
 
           <article class="proj-card">
             <header class="proj-card__head">
-              <h3>PVR Justification AI Agent</h3>
-              <ul class="proj-tags"><li>Abacus AI</li><li>Copilot Studio</li><li>PDF parsing</li></ul>
+              <h3>Customer Risk &amp; Sentiment Workflow</h3>
+              <ul class="proj-tags">
+                <li>Salesforce</li>
+                <li>Power Automate</li>
+                <li>Python</li>
+                <li>GPT / LLM</li>
+              </ul>
             </header>
-            <p class="proj-lead"><strong>What I built —</strong> An AI agent that helps the Renewals team validate PVR requests before submission by checking whether the request aligns with defined policy criteria.</p>
+            <p class="proj-lead"><strong>What I built —</strong> Designed and independently developed an AI-powered
+              workflow integrating Salesforce, Power Automate, Python, and a GPT-based LLM through an enterprise proxy.
+              Automated weekly analysis of approximately 1,000 customer records, classifying sentiment across five
+              categories using Customer Success Manager-defined criteria.</p>
             <div class="proj-meta">
-              <div><span class="proj-meta__label">Who it helps</span><p>Renewals team members preparing PVR submissions and seeking faster, policy-aligned validation.</p></div>
-              <div><span class="proj-meta__label">When to use</span><p>Before submitting a PVR, to quickly assess whether the justification and details are aligned with approval criteria.</p></div>
+              <div><span class="proj-meta__label">What it does</span>
+                <p>Identifies Concerning and Cautious accounts, segments results by AMER, EMEA, and APAC, and
+                  automatically distributes customized reports to <strong>9 GEO managers</strong>.</p>
+              </div>
+              <div><span class="proj-meta__label">Impact</span>
+                <p>Reduced weekly processing time from <strong>30&ndash;40 minutes</strong> to approximately
+                  <strong>30 seconds</strong> — a <strong>98%</strong> reduction.</p>
+              </div>
             </div>
-            <div class="proj-how">
-              <span class="proj-meta__label">How it works</span>
-              <ol>
-                <li>User uploads the PVR document(s).</li>
-                <li>The agent reviews the PVR PDF and checks it against the decision conditions.</li>
-                <li>The agent returns a policy-based assessment of whether the request is likely to meet the criteria.</li>
-              </ol>
-            </div>
-            <div class="proj-foot">
-              <div><span class="proj-meta__label">Inputs</span><p>PVR documents (PDF) and defined policy criteria / decision conditions.</p></div>
-              <div><span class="proj-meta__label">Outputs</span><p>A structured assessment indicating alignment with criteria, supporting decision-making before submission.</p></div>
-              <div><span class="proj-meta__label">Tools / Platforms</span><p>Built in both Abacus AI and Copilot Studio.</p></div>
-            </div>
-            <p class="proj-status"><strong>Notes:</strong> Uses decision conditions I trained based on information provided by Herb.</p>
+            <p class="proj-status"><strong>Business outcome:</strong> Improved reporting consistency, at-risk customer
+              identification, and stakeholder response time.</p>
           </article>
 
           <article class="proj-card">
             <header class="proj-card__head">
-              <h3>$0 PVR Tracking &amp; Review AI Agent</h3>
-              <ul class="proj-tags"><li>Copilot Studio</li><li>Microsoft Teams</li><li>SharePoint</li><li>Power Automate</li></ul>
+              <h3>PVR Governance AI Agents</h3>
+              <ul class="proj-tags">
+                <li>Copilot Studio</li>
+                <li>Abacus AI</li>
+                <li>Vector DB</li>
+                <li>$1.665M protected</li>
+              </ul>
             </header>
-            <p class="proj-lead"><strong>What I built —</strong> A Copilot Studio AI agent in Microsoft Teams that helps the Renewals team track $0 PVR approvals end-to-end through a conversational experience.</p>
+            <p class="proj-lead"><strong>What I built —</strong> Independently designed and launched two AI agents to
+              improve discount governance and approval visibility for NetApp&rsquo;s Renewals organization. Built the
+              <strong>$0 PVR Tracker</strong> using Microsoft Copilot Studio, Teams, and SharePoint for real-time
+              approval status, request aging, pending-approver identification, and delay insights in approximately one
+              minute. Developed the <strong>PVR Justification Agent</strong> on Abacus AI using a vector database to
+              evaluate uploaded PDF or text-based requests against discount thresholds, pricing tiers, deal value,
+              standard terms, coverage, scores, MPA verification, and justification quality.</p>
             <div class="proj-meta">
-              <div><span class="proj-meta__label">Who it helps</span><p>Renewals team, Geo leaders, and stakeholders monitoring approvals, rejections, pending items, and aging.</p></div>
-              <div><span class="proj-meta__label">Problem / Current state</span><p>Approvers respond via email; responses are captured in a SharePoint list via Power Automate. Stakeholders then review the list manually to track status.</p></div>
+              <div><span class="proj-meta__label">Scale</span>
+                <p>Supports approximately <strong>70&ndash;90 monthly users</strong> and assesses/tracks approximately
+                  <strong>45&ndash;50 requests</strong>.</p>
+              </div>
+              <div><span class="proj-meta__label">Business outcome</span>
+                <p>Helped protect approximately <strong>$1.665M</strong> in renewal value from FY25 through YTD FY26 by
+                  preventing unnecessary discounting.</p>
+              </div>
             </div>
-            <div class="proj-how">
-              <span class="proj-meta__label">How it works</span>
-              <ol>
-                <li>User asks the chatbot for PVR status and approval progress.</li>
-                <li>The agent retrieves relevant records from the SharePoint list (captured via Power Automate).</li>
-                <li>The agent summarizes status in a clear, conversational format.</li>
-              </ol>
-            </div>
-            <div class="proj-foot">
-              <div><span class="proj-meta__label">Inputs</span><p>SharePoint list entries (approval status) populated by Power Automate from email responses.</p></div>
-              <div><span class="proj-meta__label">Outputs</span><p>Real-time tracking answers in Teams — approvals, pending, rejections, dates, and overall status.</p></div>
-              <div><span class="proj-meta__label">Tools / Integrations</span><p>Copilot Studio + Microsoft Teams; SharePoint List + Power Automate for status capture.</p></div>
-            </div>
-            <p class="proj-status"><strong>Status / Next steps:</strong> Prototype ready and working; awaiting Renewals team feedback before rolling out to the full team.</p>
+            <p class="proj-status"><strong>Tools:</strong> Microsoft Copilot Studio · Teams · SharePoint · Abacus AI ·
+              Vector database</p>
           </article>
 
           <article class="proj-card">
             <header class="proj-card__head">
-              <h3>Quote Validation Tool</h3>
-              <ul class="proj-tags"><li>Python</li><li>Oracle (thick client)</li><li>Browser-local</li><li>Modernization</li></ul>
+              <h3>E-Series AutoSupport ON Analyzer</h3>
+              <ul class="proj-tags">
+                <li>Python MCP</li>
+                <li>Streamlit</li>
+                <li>AIQ API</li>
+                <li>97.5% accuracy</li>
+              </ul>
             </header>
-            <p class="proj-lead"><strong>What I built —</strong> Modernized a legacy Python-based quote validation solution and rebuilt it to run in a browser locally, with a plan to deploy it on a server for broader use.</p>
+            <p class="proj-lead"><strong>What I built —</strong> Independently designed, developed, tested, and deployed
+              the E-Series AutoSupport ON Analyzer, a production-ready internal application that automates AutoSupport
+              verification for NetApp E-Series products. Built a Python-based MCP server integrated with the internal
+              AIQ portal and deployed the solution through a Streamlit-based Renewals Toolkit Portal.</p>
             <div class="proj-meta">
-              <div><span class="proj-meta__label">Who it helps</span><p>Teams that need a scalable quote validation capability without per-user installation overhead.</p></div>
-              <div><span class="proj-meta__label">Problem / Current state</span><p>The IBX team shared a legacy codebase with outdated libraries. It previously ran as local scripts requiring installation on each machine, limiting usage to individual setups.</p></div>
+              <div><span class="proj-meta__label">Capabilities</span>
+                <p>Retrieves and analyzes AIQ logs through API integration to verify customer details, product serial
+                  numbers, and AutoSupport status for multiple products simultaneously.</p>
+              </div>
+              <div><span class="proj-meta__label">Impact</span>
+                <p>Reduced verification time from <strong>20&ndash;30 minutes</strong> to approximately
+                  <strong>1 minute</strong> — a <strong>95%&ndash;97%</strong> improvement — for
+                  <strong>62 users</strong> processing approximately <strong>30&ndash;40 cases</strong>.</p>
+              </div>
             </div>
-            <div class="proj-how">
-              <span class="proj-meta__label">What I changed</span>
-              <ol>
-                <li>Reviewed the full codebase and upgraded it to the latest Python version.</li>
-                <li>Removed outdated libraries and updated the Oracle database connection.</li>
-                <li>Rebuilt the solution to run locally in a browser.</li>
-              </ol>
+            <p class="proj-status"><strong>Validation:</strong> Tested against <strong>120 manually reviewed cases</strong>
+              with <strong>97.5%</strong> verification accuracy, improving quote turnaround, renewal-processing speed,
+              reporting consistency, and reducing manual errors.</p>
+          </article>
+
+          <article class="proj-card">
+            <header class="proj-card__head">
+              <h3>QuoteEdge Info</h3>
+              <ul class="proj-tags">
+                <li>Streamlit</li>
+                <li>QuoteEdge DB</li>
+                <li>PDF / Excel / CSV</li>
+              </ul>
+            </header>
+            <p class="proj-lead"><strong>What I built —</strong> Independently designed, developed, tested, and deployed
+              QuoteEdge Info, a production application that restored access to historical quote data after NetApp&rsquo;s
+              legacy QuoteEdge portal was decommissioned. Built within the Streamlit-based Renewals Toolkit Portal, the
+              solution connects directly to the active QuoteEdge database and allows teams to search multiple records by
+              quote number or product serial number, preview purchase-order information, and generate downloadable files
+              in PDF, Excel, and CSV formats.</p>
+            <div class="proj-meta">
+              <div><span class="proj-meta__label">Scale</span>
+                <p>Supports approximately <strong>140 users</strong> and processes
+                  <strong>50&ndash;60 historical quote requests weekly</strong>, delivering results within
+                  <strong>1&ndash;2 minutes</strong>.</p>
+              </div>
+              <div><span class="proj-meta__label">Business outcome</span>
+                <p>Restored business-critical access to historical pricing, discount, and product information.</p>
+              </div>
             </div>
-            <div class="proj-foot">
-              <div><span class="proj-meta__label">Key challenge</span><p>Many legacy libraries were only compatible with earlier Python releases; upgrading and validating the end-to-end solution took ~1 month.</p></div>
-              <div><span class="proj-meta__label">Dependencies</span><p>Oracle database client installation was required during testing. The legacy solution used a thin client; the updated program runs on the Oracle thick client.</p></div>
-              <div><span class="proj-meta__label">Status / Next steps</span><p>Runs successfully on my local machine. Next: deploy to a virtual server so others can use and test it.</p></div>
+            <p class="proj-status"><strong>Impact:</strong> Improved quote comparisons, data accessibility, pricing
+              consistency, and renewal turnaround.</p>
+          </article>
+
+          <article class="proj-card">
+            <header class="proj-card__head">
+              <h3>CPQ Report Generator</h3>
+              <ul class="proj-tags">
+                <li>Oracle CPQ</li>
+                <li>Streamlit</li>
+                <li>94.2% accuracy</li>
+              </ul>
+            </header>
+            <p class="proj-lead"><strong>What I built —</strong> Independently designed, developed, and deployed the CPQ
+              Report Generator, a production application that addresses data gaps in standard Oracle CPQ CSV exports.
+              Built within the Streamlit-based Renewals Toolkit Portal, the solution connects directly to the Oracle CPQ
+              database and dynamically generates enriched CSV reports containing shelf information, software versions,
+              OS capacity, hardware and software details, and EOSL dates.</p>
+            <div class="proj-meta">
+              <div><span class="proj-meta__label">Capabilities</span>
+                <p>Process multiple quote numbers simultaneously, preview results in a structured table, and download
+                  complete reports.</p>
+              </div>
+              <div><span class="proj-meta__label">Impact</span>
+                <p>Reduced report preparation time from approximately <strong>20 minutes</strong> to
+                  <strong>1&ndash;2 minutes</strong> — a <strong>90%&ndash;95%</strong> reduction — for
+                  <strong>162 users</strong> generating approximately <strong>90&ndash;100 reports</strong>.</p>
+              </div>
             </div>
-            <p class="proj-status"><strong>Notes:</strong> Identifying the right team at NetApp to support server deployment.</p>
+            <p class="proj-status"><strong>Validation:</strong> Tested with <strong>40 testers</strong> and
+              <strong>120 test cases</strong>, achieving <strong>94.2%</strong> output accuracy while improving data
+              completeness, reporting consistency, quote turnaround, and renewal-processing speed.</p>
+          </article>
+
+          <article class="proj-card">
+            <header class="proj-card__head">
+              <h3>RCV Calculator</h3>
+              <ul class="proj-tags">
+                <li>Python</li>
+                <li>Streamlit</li>
+                <li>LLM proxy</li>
+                <li>93%&ndash;98% reduction</li>
+              </ul>
+            </header>
+            <p class="proj-lead"><strong>What I built —</strong> Independently designed, developed, and deployed the RCV
+              Calculator, a production-ready Recognized Contract Value calculator within the Renewals Toolkit Portal.
+              Built using Python, Streamlit, pandas, APIs, SQL, and an enterprise LLM proxy, the solution processes
+              Excel, CSV, and PDF files, uses AI-assisted column mapping, and consistently applies Renewals-approved RCV
+              rules across multiple opportunities.</p>
+            <div class="proj-meta">
+              <div><span class="proj-meta__label">Impact</span>
+                <p>Reduced processing time from <strong>30&ndash;40 minutes</strong> to
+                  <strong>1&ndash;2 minutes</strong> — a <strong>93%&ndash;98%</strong> reduction — and supports
+                  <strong>162 users</strong> processing approximately <strong>80 files weekly</strong>.</p>
+              </div>
+              <div><span class="proj-meta__label">Outputs</span>
+                <p>Structured Excel and PDF outputs for internal reporting, forecasting, compensation, and
+                  revenue-recognition workflows.</p>
+              </div>
+            </div>
+            <p class="proj-status"><strong>Business outcome:</strong> Standardizes renewal-value calculations and reduces
+              manual errors across opportunities.</p>
+          </article>
+
+          <article class="proj-card">
+            <header class="proj-card__head">
+              <h3>Microsoft 365 Copilot skills.md Framework</h3>
+              <ul class="proj-tags">
+                <li>skills.md</li>
+                <li>Microsoft 365 Copilot</li>
+                <li>Cross-GEO</li>
+              </ul>
+            </header>
+            <p class="proj-lead"><strong>What I built —</strong> Designed reusable <strong>skills.md</strong> files for a
+              Microsoft 365 Copilot workflow framework that reduced personal reporting effort and improved the speed and
+              consistency of insights delivered to cross-GEO leadership.</p>
+            <div class="proj-meta">
+              <div><span class="proj-meta__label">Who it helps</span>
+                <p>Cross-GEO leadership needing faster, more consistent reporting insights.</p>
+              </div>
+              <div><span class="proj-meta__label">Impact</span>
+                <p>Reduced personal reporting effort while improving insight speed and consistency.</p>
+              </div>
+            </div>
+            <p class="proj-status"><strong>Approach:</strong> Reusable Copilot workflow assets for repeatable leadership
+              reporting.</p>
           </article>
 
         </div>
+
+        <p class="tl-stack" style="margin-top:1.75rem"><strong>Core Technologies:</strong> Microsoft Copilot Studio ·
+          Power Apps · Power Automate · SharePoint List · Abacus AI · Python · Pair Programming · Pandas · NumPy ·
+          Matplotlib · JSON · API &amp; MCP · Oracle ERP · Salesforce (SFDC / SPARK) · PRD and BRD · skills.md</p>
       </article>
 
       <!-- Achievements -->
@@ -569,6 +746,10 @@
       <article class="panel" role="tabpanel" id="panel-certificates" aria-labelledby="tab-certificates" hidden>
         <h2 class="panel__title">Certificates</h2>
         <ul class="cert-grid">
+          <li class="cert">
+            <span class="cert__icon cert__icon--img"><img src="../CSPO_Badge.png" alt="CSPO badge" width="40" height="40" loading="lazy" /></span>
+            <div><h3>Certified Scrum Product Owner&reg; (CSPO&reg;)</h3><p>Scrum Alliance</p></div>
+          </li>
           <li class="cert"><span class="cert__icon">🎓</span><div><h3>Google Project Management Specialization</h3><p>Google</p></div></li>
           <li class="cert"><span class="cert__icon">🤖</span><div><h3>Generative AI in Project Management</h3><p>PMI</p></div></li>
           <li class="cert"><span class="cert__icon">📊</span><div><h3>Complete Data Science &amp; ML Bootcamp</h3><p>Udemy</p></div></li>

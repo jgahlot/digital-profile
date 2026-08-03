@@ -129,9 +129,26 @@ a:hover, a:focus-visible { color: var(--amber); }
   max-width: var(--maxw);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr auto;
   gap: clamp(1.5rem, 4vw, 3rem);
   align-items: center;
+}
+
+.hero__badge {
+  width: clamp(96px, 12vw, 132px);
+  flex-shrink: 0;
+  justify-self: end;
+}
+.hero__badge img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.45));
+  transition: transform .25s var(--ease);
+}
+.hero__badge img:hover {
+  transform: scale(1.04);
 }
 
 .hero__avatar {
@@ -187,6 +204,14 @@ a:hover, a:focus-visible { color: var(--amber); }
   color: transparent;
 }
 
+.hero__cert {
+  font-size: .36em;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--amber);
+  -webkit-text-fill-color: var(--amber);
+  vertical-align: middle;
+}
 .hero__pronoun {
   font-size: .55em;
   font-weight: 500;
@@ -428,6 +453,18 @@ a:hover, a:focus-visible { color: var(--amber); }
   color: var(--text-soft);
   font-size: .98rem;
   line-height: 1.6;
+}
+.featured-award--cspo {
+  margin-top: 2rem;
+  background: linear-gradient(160deg, rgba(230, 92, 36, 0.14) 0%, rgba(255, 255, 255, 0.03) 55%, rgba(34, 211, 238, 0.08) 100%);
+  border-left-color: #e65c24;
+}
+.featured-award--cspo + .featured-award {
+  margin-top: 1.25rem;
+}
+.featured-award--cspo .featured-award__ribbon {
+  background: linear-gradient(135deg, #e65c24, #f08a4b);
+  color: #fff;
 }
 
 @media (max-width: 720px) {
@@ -835,6 +872,19 @@ a:hover, a:focus-visible { color: var(--amber); }
   line-height: 1;
   flex-shrink: 0;
 }
+.cert__icon--img {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.cert__icon--img img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
 .cert h3 {
   margin: 0 0 .2rem;
   font-size: .98rem;
@@ -1071,6 +1121,12 @@ a:hover, a:focus-visible { color: var(--amber); }
     justify-items: center;
   }
   .hero__avatar { width: 140px; }
+  .hero__badge {
+    width: 108px;
+    justify-self: center;
+    order: 2;
+  }
+  .hero__intro { order: 3; }
   .hero__contact { justify-content: center; }
   .hero__actions { justify-content: center; }
   .tabs {

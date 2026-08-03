@@ -175,7 +175,7 @@ a:hover, a:focus-visible { color: var(--plum); }
   max-width: var(--maxw);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr auto;
   gap: clamp(1.5rem, 4vw, 3.2rem);
   align-items: center;
   background: rgba(255, 255, 255, 0.7);
@@ -185,6 +185,23 @@ a:hover, a:focus-visible { color: var(--plum); }
   border-radius: var(--radius-lg);
   padding: clamp(1.5rem, 4vw, 2.5rem);
   box-shadow: var(--shadow-2);
+}
+
+.hero__badge {
+  width: clamp(96px, 12vw, 132px);
+  flex-shrink: 0;
+  justify-self: end;
+}
+.hero__badge img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 18px rgba(47, 58, 58, 0.18));
+  transition: transform .25s var(--ease);
+}
+.hero__badge img:hover {
+  transform: scale(1.04);
 }
 
 .hero__avatar {
@@ -242,6 +259,13 @@ a:hover, a:focus-visible { color: var(--plum); }
   border-radius: 8px;
   background: linear-gradient(90deg, var(--sakura-2) 0%, var(--gold) 60%, var(--sage-2) 100%);
   opacity: .9;
+}
+.hero__cert {
+  font-size: .36em;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--coral);
+  vertical-align: middle;
 }
 .hero__pronoun {
   font-size: .5em;
@@ -490,6 +514,18 @@ a:hover, a:focus-visible { color: var(--plum); }
   color: var(--ink-soft);
   font-size: .98rem;
   line-height: 1.6;
+}
+.featured-award--cspo {
+  margin-top: 2rem;
+  background: linear-gradient(160deg, #fff7f0 0%, #ffffff 55%, #eef4ff 100%);
+  border-left-color: #e65c24;
+}
+.featured-award--cspo + .featured-award {
+  margin-top: 1.25rem;
+}
+.featured-award--cspo .featured-award__ribbon {
+  background: #e65c24;
+  color: #fff;
 }
 
 @media (max-width: 720px) {
@@ -860,6 +896,19 @@ a:hover, a:focus-visible { color: var(--plum); }
 }
 .cert:hover { transform: translateY(-3px); box-shadow: var(--shadow-1); }
 .cert__icon { font-size: 1.6rem; line-height: 1; flex-shrink: 0; }
+.cert__icon--img {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.cert__icon--img img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
 .cert h3 {
   margin: 0 0 .2rem;
   font-family: var(--display);
@@ -1084,6 +1133,12 @@ a:hover, a:focus-visible { color: var(--plum); }
     padding: 1.5rem;
   }
   .hero__avatar { width: 140px; }
+  .hero__badge {
+    width: 108px;
+    justify-self: center;
+    order: 2;
+  }
+  .hero__intro { order: 3; }
   .hero__contact { justify-content: center; }
   .hero__actions { justify-content: center; }
   .hero__name::after { margin-left: auto; margin-right: auto; }
