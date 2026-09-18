@@ -516,10 +516,11 @@ a:hover, a:focus-visible { color: var(--plum); }
   line-height: 1.6;
 }
 .featured-award--cspo {
-  margin-top: 2rem;
   background: linear-gradient(160deg, #fff7f0 0%, #ffffff 55%, #eef4ff 100%);
   border-left-color: #e65c24;
 }
+.featured-award + .featured-award,
+.featured-award + .featured-award--cspo,
 .featured-award--cspo + .featured-award {
   margin-top: 1.25rem;
 }
